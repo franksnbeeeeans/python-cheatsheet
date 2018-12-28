@@ -21,7 +21,7 @@ List
 <list> = <list>[from_inclusive : to_exclusive : step_size]
 <list>.append(<el>)
 <list>.extend(<list>)
-<list> += [<el>]
+<list> += [<el>]        # x = [1,2]        x += [3]       x = [1,2,3]
 <list> += <list>
 ```
 
@@ -40,7 +40,7 @@ sorted_by_both   = sorted(<list>, key=lambda el: (el[1], el[0]))
 flattened_list   = list(itertools.chain.from_iterable(<list>))
 list_of_chars    = list(<str>)
 product_of_elems = functools.reduce(lambda out, x: out * x, <list>)
-no_duplicates    = list(dict.fromkeys(<list>))
+no_duplicates    = list(dict.fromkeys(<list>))    #same as set() but returns list instead of set
 ```
 
 ```python
